@@ -39,5 +39,11 @@ warna khas proyek lewat variabel di tag `<body style="--accent:…; --band:…">
 
 ## Form kontak
 
-Form membuka aplikasi email pengunjung (mailto) ke alamat `email` di `data.js`.
-Kalau ingin pesan terkirim langsung, sambungkan ke layanan seperti Formspree.
+Form dikirim lewat [Web3Forms](https://web3forms.com) ke email yang didaftarkan di sana
+(access key ada di `web3formsKey` di `js/data.js`). Kalau key dikosongkan, form
+kembali membuka aplikasi email pengunjung (mailto).
+
+## Deploy
+
+Situs dihosting di GitHub Pages: https://mutofu.github.io — setiap `git push` ke
+`main` otomatis memperbarui situs dalam 1–2 menit.
