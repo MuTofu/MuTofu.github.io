@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cahya Mustofa — Web & Mobile Developer</title>
+  <meta name="description" content="Portofolio Cahya Mustofa — Web & Mobile Developer di Yogyakarta. Laravel, React, Flutter.">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M3 21l1.7-4.9A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.9-.4-1.8-1.3-2.2-2.2l.8-1-1-2L9 9.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  </svg>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="#top" class="logo header-cell" data-logo></a>
+      <nav class="nav" id="nav" aria-label="Navigasi utama">
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#portfolio">Proyek</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <a href="#contact" class="header-cta header-cell">Hubungi Saya <svg class="i"><use href="#i-arrow"/></svg></a>
+      <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-top">
+          <div>
+            <p class="eyebrow reveal">Halo! <span class="wave" aria-hidden="true">👋</span> Saya</p>
+            <h1 class="hero-name reveal" style="--d:.08s" data-bind="name"></h1>
+          </div>
+          <a href="#contact" class="status reveal" style="--d:.2s"><span class="status-dot"></span>Terbuka untuk proyek baru</a>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-photo reveal" style="--d:.15s">
+            <div class="photo" data-photo></div>
+            <p class="photo-caption"><svg class="i"><use href="#i-pin"/></svg><span data-bind="location"></span></p>
+          </div>
+          <div class="hero-body">
+            <p class="hero-intro reveal" style="--d:.22s" data-bind="intro"></p>
+            <div class="hero-actions reveal" style="--d:.3s">
+              <a href="#contact" class="btn btn-dark">Ayo Ngobrol <svg class="i"><use href="#i-arrow"/></svg></a>
+              <a href="#" class="btn btn-line" data-cv download>Unduh CV <svg class="i"><use href="#i-arrow"/></svg></a>
+              <span class="hero-rule" aria-hidden="true"></span>
+              <ul class="socials" data-socials></ul>
+            </div>
+            <p class="role-outline reveal" style="--d:.38s" data-bind="role" aria-hidden="true"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <div class="section-title reveal"><h2>Tentang Saya</h2><span></span></div>
+        <p class="about-lead reveal" data-about-lead></p>
+        <div class="about-grid">
+          <div class="about-stat reveal">
+            <div class="stat-num"><span data-count></span><span data-stat-suffix></span></div>
+            <p class="stat-label" data-stat-label></p>
+            <a href="#" class="btn-round" data-cv download><span>Unduh CV <svg class="i"><use href="#i-arrow"/></svg></span></a>
+          </div>
+          <div class="about-side reveal" style="--d:.1s">
+            <p class="about-text" data-bind="about.text"></p>
+            <dl class="facts" data-facts></dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-soft">
+      <div class="container narrow">
+        <div class="section-title reveal"><h2>Keahlian</h2><span></span></div>
+        <div class="skills" data-skills></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section section-dark">
+      <div class="container narrow">
+        <div class="portfolio-head">
+          <div class="section-title reveal"><h2>Proyek Terbaru</h2><span></span></div>
+          <div class="filters reveal" role="tablist" aria-label="Filter proyek" data-filters></div>
+        </div>
+        <div class="projects" data-projects></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container narrow">
+        <div class="section-title reveal"><h2>Pengalaman</h2><span></span></div>
+        <div class="timeline" data-experience></div>
+
+        <h3 class="sub-title reveal">Pendidikan</h3>
+        <div class="edu" data-education></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container narrow">
+      <div class="contact-grid">
+        <div>
+          <h2 class="contact-title reveal">Ayo<br>Terhubung.</h2>
+          <p class="muted reveal">Terbuka untuk proyek freelance, kerja sama, maupun posisi full-time. Biasanya saya membalas dalam 1×24 jam.</p>
+          <ul class="contact-list reveal" data-contact-list></ul>
+        </div>
+        <form class="form reveal" id="contact-form" novalidate style="--d:.1s">
+          <div class="form-row">
+            <label class="field"><span>Nama</span><input name="name" type="text" required autocomplete="name"></label>
+            <label class="field"><span>Email</span><input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <label class="field"><span>Perihal</span><input name="subject" type="text" placeholder="Proyek website, aplikasi mobile, …"></label>
+          <label class="field"><span>Pesan</span><textarea name="message" rows="4" required></textarea></label>
+          <!-- jebakan bot: disembunyikan dari manusia, bot biasanya mencentangnya -->
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-dark">Kirim Pesan <svg class="i"><use href="#i-arrow"/></svg></button>
+          <p class="form-msg" role="status" data-form-msg></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container narrow footer-inner">
+      <a href="#top" class="logo" data-logo></a>
+      <p class="muted">© <span data-year></span> <span data-bind="name"></span></p>
+      <ul class="socials socials-sm" data-socials></ul>
+    </div>
+  </footer>
+
+  <a href="#top" class="to-top" aria-label="Kembali ke atas">
+    <svg class="to-top-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47"/></svg>
+    <svg class="i"><use href="#i-up"/></svg>
+  </a>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

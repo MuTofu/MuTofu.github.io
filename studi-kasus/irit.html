@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IRIT — Studi Kasus · Cahya Mustofa</title>
+  <meta name="description" content="Studi kasus IRIT: aplikasi keuangan pribadi offline-first dengan Flutter.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/case.css">
+</head>
+<body style="--accent:#1552c4; --tint:#dde6f7; --band:#0f2a5c; --band-accent:#9cc0ff; --band-line:#2f4c84; --band-text:#c6d3ec;">
+  <header class="cs-top">
+    <div class="wrap">
+      <a href="../index.html#portfolio" class="cs-back"><svg class="i" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Semua proyek</a>
+      <a href="../index.html" class="cs-logo">Cahya<span>.</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="cs-hero wrap">
+      <p class="cs-meta label"><span>Studi kasus</span><span>Proyek pribadi</span><span>2025</span></p>
+      <div class="cs-hero-grid">
+        <div>
+          <p class="label cs-tag">Flutter · Offline-first</p>
+          <h1>IRIT</h1>
+          <p class="cs-lead">Aplikasi keuangan pribadi untuk mencatat pemasukan, pengeluaran, dan anggaran bulanan di banyak rekening — semua tersimpan di perangkat, tanpa server.</p>
+        </div>
+        <div class="cs-media">
+          <div class="phones">
+            <div class="phone"><img src="../project/IRIT/assets/c0cfddee9dc43a2146fe946cec6e8634.png" alt="Realisasi anggaran per kategori"></div>
+            <div class="phone"><img src="../project/IRIT/assets/3f11c4ddb8e8a22a271dd708111ede52.png" alt="Dashboard dengan total saldo, pemasukan, dan pengeluaran"></div>
+            <div class="phone"><img src="../project/IRIT/assets/a8b295bc24ad5c156e4e1f65fd7ab332.png" alt="Daftar transaksi dengan pengeluaran bulanan"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-facts">
+        <div><span class="label">Peran</span><strong>Solo developer</strong></div>
+        <div><span class="label">Platform</span><strong>Android, iOS, Windows, macOS, Linux</strong></div>
+        <div><span class="label">Durasi</span><strong>5 hari · Nov 2025</strong></div>
+        <div><span class="label">Stack</span><strong>Flutter · Riverpod · SQLite</strong></div>
+      </div>
+    </section>
+
+    <section class="cs-band">
+      <div class="wrap cs-band-grid">
+        <div>
+          <p class="label">01 — Anggaran</p>
+          <h2>Anggaran yang mengikuti pemasukan, bukan angka tetap.</h2>
+          <ul class="cs-points">
+            <li><b>A</b><span><strong>Alokasi persentase</strong> — bagi pemasukan tiap bulan ke beberapa kategori; aplikasi menampilkan sisa yang belum dialokasikan.</span></li>
+            <li><b>B</b><span><strong>Realisasi per kategori</strong> — ring progres membandingkan anggaran dengan pengeluaran sebenarnya.</span></li>
+            <li><b>C</b><span><strong>Validasi overdraft</strong> — transaksi tidak bisa membuat saldo rekening minus.</span></li>
+          </ul>
+        </div>
+        <div class="band-media">
+          <div class="phone"><img src="../project/IRIT/assets/c0cfddee9dc43a2146fe946cec6e8634.png" alt="Ring realisasi anggaran" loading="lazy"></div>
+          <div class="phone"><img src="../project/IRIT/assets/caf01944675a3da74cc7f1c07ec9254c.png" alt="Layar income per bulan dan sumber" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section wrap">
+      <div class="cs-head">
+        <div>
+          <p class="label">02 — Fitur utama</p>
+          <h2>Keuangan sebulan, dalam satu layar.</h2>
+        </div>
+        <p>Dashboard menjawab tiga pertanyaan yang paling sering muncul: berapa saldo saya, berapa yang masuk, dan berapa yang keluar.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg>
+          <h3>Saldo multi-rekening</h3>
+          <p>Total saldo dari semua rekening bank dan kas, diperbarui di setiap transaksi.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          <h3>Pemasukan per sumber</h3>
+          <p>Gaji, freelance, dan sumber lain, bisa difilter per bulan dan tahun ke tiap rekening.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>
+          <h3>Pencarian pengeluaran</h3>
+          <p>Pengeluaran dikelompokkan per tanggal, dengan pencarian, filter, serta total bulanan dan tahunan.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg>
+          <h3>Alokasi anggaran</h3>
+          <p>Anggaran bulanan berdasarkan persentase pemasukan, dengan realisasi per kategori.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg>
+          <h3>Penyimpanan offline-first</h3>
+          <p>SQLite lokal dengan migrasi berversi hingga schema v7 dan composite index agar query cepat.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Login lokal</h3>
+          <p>Password di-hash dengan SHA-256, dan sesi tersimpan di perangkat.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cs-section wrap">
+      <div class="cs-head split">
+        <div>
+          <p class="label">03 — Di balik layar</p>
+          <h2>Clean Architecture</h2>
+        </div>
+        <p>8 modul fitur · masing-masing dibagi tiga lapis</p>
+      </div>
+      <div class="flow">
+        <div class="node"><span class="label">Presentation</span><strong>Flutter UI + Riverpod</strong><p>State reaktif, satu layar per fitur</p></div>
+        <div class="arrow"><svg viewBox="0 0 44 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 8h40M34 2l6 6-6 6"/></svg></div>
+        <div class="node"><span class="label">Domain</span><strong>Use cases</strong><p>Satu use case per operasi (single responsibility)</p></div>
+        <div class="arrow"><svg viewBox="0 0 44 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 8h40M34 2l6 6-6 6"/></svg></div>
+        <div class="node"><span class="label">Data</span><strong>Repositories</strong><p>Memetakan data ke entitas domain</p></div>
+        <div class="arrow"><svg viewBox="0 0 44 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 8h40M34 2l6 6-6 6"/></svg></div>
+        <div class="node fill"><span class="label">Di perangkat</span><strong>SQLite (sqflite)</strong><p>Schema v7, migrasi berversi</p></div>
+      </div>
+      <ul class="tags" style="margin-top:24px"><li>Flutter</li><li>Dart</li><li>Riverpod</li><li>SQLite · sqflite</li><li>shared_preferences</li><li>Clean Architecture</li></ul>
+    </section>
+  </main>
+
+  <a href="kjpp.html" class="cs-next">
+    <div class="wrap">
+      <div><span class="label">Proyek berikutnya</span><strong>Sistem KJPP</strong></div>
+      <span class="cs-next-arrow"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </div>
+  </a>
+  <footer class="cs-foot"><div class="wrap"><span>Dibuat oleh Cahya Mustofa</span><a href="../index.html#contact">Hubungi saya ↗</a></div></footer>
+</body>
+</html>

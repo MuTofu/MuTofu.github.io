@@ -1,0 +1,12 @@
+# File runtime dari ekspor tool desain — tidak dipakai website
+# (hanya project/*/assets yang dipakai sebagai gambar)
+project/*/vendor/
+project/*/support.js
+project/*/OnePage-ID.dc.html
+project/*/README.md
+
+# Sistem
+Thumbs.db
+desktop.ini
+.DS_Store
+.claude/

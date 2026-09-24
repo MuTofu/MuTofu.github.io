@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIAKAD — Studi Kasus · Cahya Mustofa</title>
+  <meta name="description" content="Studi kasus SIAKAD: sistem informasi akademik berbasis microservice FastAPI dan Flutter.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/case.css">
+</head>
+<body style="--accent:#3b45c4; --tint:#dfe1f7; --band:#171c47; --band-accent:#aeb6ff; --band-line:#353b78; --band-text:#c3c7e6;">
+  <header class="cs-top">
+    <div class="wrap">
+      <a href="../index.html#portfolio" class="cs-back"><svg class="i" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Semua proyek</a>
+      <a href="../index.html" class="cs-logo">Cahya<span>.</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="cs-hero wrap">
+      <p class="cs-meta label"><span>Studi kasus</span><span>Skripsi</span><span>2026</span></p>
+      <div class="cs-hero-grid">
+        <div>
+          <p class="label cs-tag">Microservices · Stateless JWT</p>
+          <h1>SIAKAD</h1>
+          <p class="cs-lead">Sistem informasi akademik sekolah yang dipecah menjadi dua service FastAPI, saling percaya lewat JWT dengan shared key — tanpa API gateway, tanpa penyimpanan sesi terpusat.</p>
+        </div>
+        <div class="cs-media">
+          <div class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span></div>
+            <img src="../project/SIAKAD/assets/c9da19b4ca430c66b443e19e39c72631.png" alt="Tampilan guru untuk detail nilai siswa, dengan rata-rata dan range ketuntasan">
+          </div>
+        </div>
+      </div>
+      <div class="cs-facts">
+        <div><span class="label">Peran</span><strong>Solo developer</strong></div>
+        <div><span class="label">Konteks</span><strong>Skripsi · Informatika, UTY</strong></div>
+        <div><span class="label">Pengguna</span><strong>Admin, Guru, Siswa</strong></div>
+        <div><span class="label">Stack</span><strong>FastAPI · Flutter · JWT</strong></div>
+      </div>
+    </section>
+
+    <section class="cs-band">
+      <div class="wrap">
+        <div class="cs-band-head">
+          <div>
+            <p class="label">01 — Arsitektur</p>
+            <h2>Dua service, dua database, satu token yang bisa diverifikasi masing-masing.</h2>
+          </div>
+          <p>Skripsi ini menguji apakah sistem sekolah skala kecil bisa berjalan sebagai microservice tanpa API gateway — dengan tiap service tetap bisa di-deploy sendiri.</p>
+        </div>
+
+        <div class="arch">
+          <div class="node"><span class="label">Client</span><strong>Flutter app</strong><p>MVVM + Provider, layar sesuai role</p></div>
+          <div class="arrow"><svg viewBox="0 0 44 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 8h40M34 2l6 6-6 6"/></svg></div>
+          <div class="arch-col">
+            <div class="node fill"><span class="label">Service 1 · FastAPI</span><strong>Auth API</strong><p>Login, pengguna, menerbitkan token HS256</p></div>
+            <span class="arch-key">shared secret key</span>
+            <div class="node"><span class="label">Service 2 · FastAPI</span><strong>Akademik API</strong><p>Verifikasi token secara lokal, tanpa memanggil Auth</p></div>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 44 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h36M10 2 4 8l6 6M34 2l6 6-6 6"/></svg></div>
+          <div class="arch-col">
+            <div class="node db"><span class="label">Database</span><strong>User DB</strong></div>
+            <div class="node db"><span class="label">Database</span><strong>Akademik DB</strong></div>
+          </div>
+        </div>
+
+        <div class="cs-notes">
+          <div><strong>Autentikasi stateless</strong><p>Token yang ditandatangani HS256 oleh service Auth diverifikasi sendiri oleh service Akademik — tanpa penyimpanan sesi bersama.</p></div>
+          <div><strong>Database per service</strong><p>Tiap service punya skemanya sendiri dengan migrasi Alembic terpisah, jadi satu bisa berubah tanpa mengganggu yang lain.</p></div>
+          <div><strong>Tanpa API gateway</strong><p>Client memanggil tiap service langsung — lebih sederhana dijalankan, dengan trade-off yang dibahas di skripsi.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section wrap">
+      <div class="cs-head">
+        <div>
+          <p class="label">02 — Fitur utama</p>
+          <h2>Dari jadwal pelajaran sampai rapor.</h2>
+        </div>
+        <p>Admin menyiapkan tahun ajaran, guru menginput nilai, dan siswa melihat hasilnya — tiap role hanya melihat layar yang dibutuhkan.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Login JWT, tiga role</h3>
+          <p>Admin, Guru, dan Siswa langsung masuk ke menu dan hak aksesnya masing-masing setelah login.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3.5 3.5 0 0 1 0 5M18 14c2 .7 3 2.8 3 6"/></svg>
+          <h3>Pengguna, siswa &amp; guru</h3>
+          <p>Kelola akun, data siswa dan guru, serta penugasan kelas.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <h3>Mapel &amp; jadwal</h3>
+          <p>Mata pelajaran, jadwal mengajar, dan tahun ajaran, dengan pilihan semester.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg>
+          <h3>Input nilai sumatif</h3>
+          <p>Guru menginput nilai UTS dan UAS per siswa dan mapel, lengkap dengan rata-ratanya.</p>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          <h3>Nilai rapor otomatis</h3>
+          <p>Rata-rata nilai dikonversi ke predikat huruf berdasarkan range ketuntasan.</p>
+          <div class="grades">
+            <span style="background:#e3f2df;color:#25611c">A 90+</span>
+            <span style="background:#e1ebfb;color:#1f4e9a">B 80</span>
+            <span style="background:#fbefd9;color:#85520a">C 70</span>
+            <span style="background:#fbe3d9;color:#8f3a12">D 60</span>
+            <span style="background:#f9dddd;color:#8e1f1f">E &lt;60</span>
+          </div>
+        </article>
+        <article class="card">
+          <svg class="i" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+          <h3>Satu codebase Flutter</h3>
+          <p>MVVM dengan Provider untuk state, mengakses kedua service dari satu aplikasi.</p>
+        </article>
+      </div>
+      <ul class="tags" style="margin-top:24px"><li>FastAPI</li><li>Python</li><li>JWT · HS256</li><li>Alembic</li><li>Flutter</li><li>Provider · MVVM</li></ul>
+    </section>
+  </main>
+
+  <a href="medivoura.html" class="cs-next">
+    <div class="wrap">
+      <div><span class="label">Proyek berikutnya</span><strong>Medivoura</strong></div>
+      <span class="cs-next-arrow"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </div>
+  </a>
+  <footer class="cs-foot"><div class="wrap"><span>Dibuat oleh Cahya Mustofa</span><a href="../index.html#contact">Hubungi saya ↗</a></div></footer>
+</body>
+</html>
